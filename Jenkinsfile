@@ -11,7 +11,7 @@ pipeline {
         stage("Build"){
             steps {
                 echo "Building the image"
-                sh "docker build -t fin-project ."
+                sh "docker buildx build -t fin-project ."
             }
         }
         stage("Push to Docker Hub"){
